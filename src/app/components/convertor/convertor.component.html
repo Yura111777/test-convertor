@@ -1,6 +1,17 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-auto">
+      @for (item of currency; track item) {
+        @if (item.cc === "USD" || item.cc === "EUR") {
+          <span class="d-block my-1"
+            ><strong class="me-1">{{ item.cc }}:</strong> <i>{{ item.rate }}</i>
+          </span>
+        }
+      }
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-auto">
       <div
         class="currency mt-3 d-flex align-items-center justify-content-between"
       >
